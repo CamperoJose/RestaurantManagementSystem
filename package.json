@@ -1,0 +1,29 @@
+{
+  "name": "restaurantmanagementsystem",
+  "version": "1.0.0",
+  "description": "RestaurantManagementSystem for a restaurant called Dumbo made in Angular and mysql Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamperoJose/RestaurantManagementSystem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamperoJose/RestaurantManagementSystem/issues"
+  },
+  "homepage": "https://github.com/CamperoJose/RestaurantManagementSystem#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
