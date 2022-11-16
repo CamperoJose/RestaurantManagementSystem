@@ -1,0 +1,25 @@
+<mat-toolbar style="background-color: #15519e; color: aliceblue;">
+    <mat-toolbar-row fxLayout="row">
+        <span class="title-center">{{dialogData.action}} categoria</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="categoryForm">
+        <div fxFlex fxLayout="column">
+            <div fxLayout="row wrap">
+
+                <mat-form-field appearance="fill" fxFlex>
+                    <mat-label>Nombre de la categoria: </mat-label>
+                    <input matInput formControlName="name" required>
+                </mat-form-field>
+
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+    <button mat-raised-button style="background-color: #15519e; color: aliceblue;" type="submit" (click)="handleSubmit()">{{action}}</button>
+    <button mat-raised-button color="primary" mat-dialog-close>Cancelar</button>
+</mat-dialog-actions>

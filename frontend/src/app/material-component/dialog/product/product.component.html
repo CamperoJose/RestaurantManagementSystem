@@ -1,0 +1,46 @@
+<mat-toolbar style="background-color: #15519e; color: aliceblue;">
+    <mat-toolbar-row fxLayout="row">
+        <span class="title-center">{{dialogData.action}} producto</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="ProductForm">
+        <div fxFlex fxLayout="column">
+            <div fxLayout="row wrap">
+                <mat-form-field appearance="fill" fxFlex> 
+                    <mat-label>Nombre: </mat-label>
+                    <input matInput formControlName="name" required>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row wrap">
+                <mat-form-field appearance="fill" fxFlex>
+                    <mat-label>Precio: </mat-label>
+                    <input matInput formControlName="price" required>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" fxFlex>
+                    <mat-label>Categoria: </mat-label>
+                    <mat-select formControlName="categoryID" required>
+                        <mat-option *ngFor="let category of categorys" [value]="category.id">{{category.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row wrap">
+                <mat-form-field appearance="fill" fxFlex>
+                    <mat-label>Descripcion: </mat-label>
+                    <input matInput formControlName="description" required>
+                </mat-form-field>
+            </div>
+
+
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+    <button mat-raised-button style="background-color: #15519e; color: aliceblue;" type="submit" (click)="handleSubmit()">{{action}}</button>
+    <button mat-raised-button color="primary" mat-dialog-close>Cancelar</button>
+</mat-dialog-actions>

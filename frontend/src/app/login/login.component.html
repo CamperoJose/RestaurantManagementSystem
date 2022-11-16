@@ -1,0 +1,27 @@
+<mat-toolbar style="background-color: #15519e; color: aliceblue;">
+    <mat-toolbar-row fxLayout="row">
+        <span class="title-center">Ingreso al sistema</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="loginForm">
+        <div fxFlex fxLayout="column">
+
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>Correo: </mat-label>
+                <input matInput formControlName="correo" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>Contraseña: </mat-label>
+                <input matInput type="password" formControlName="password" required>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+    <button mat-raised-button style="background-color: #15519e; color: aliceblue;" type="submit" (click)="handleSubmit()">Enviar</button>
+    <button mat-raised-button color="primary" mat-dialog-close>Cancelar</button>
+</mat-dialog-actions>

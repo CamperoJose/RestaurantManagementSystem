@@ -1,0 +1,13 @@
+<mat-dialog-content class="mat-typography" >
+    <h5>¿ Seguro que quieres {{details.message}} ?</h5>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button style="background-color: #15519e; color: aliceblue;" (click)="handleChangeAction()">
+        SI
+    </button>
+    
+    <button color="primary" mat-raised-button mat-dialog-close>
+        NO
+    </button>
+
+</mat-dialog-actions>
