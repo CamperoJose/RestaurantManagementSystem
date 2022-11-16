@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            table{
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td,th{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3 style="text-align: center;">RESTAURANTE UCB</h3>
+        <table>
+            <tr>
+                <th>Nombre: <%= name %>
+                </th>
+                <th>Correo: <%= correo %>
+                </th>
+            </tr>
+            <tr>
+                <th>Numero: <%= numero %>
+                </th>
+                <th>Metodo de pago: <%= paymentMethod %>
+                </th>
+            </tr>
+        </table>
+
+        <h3>Detalle de compra:</h3>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Sub Total</th>
+            </tr>
+            <% if(productDetails.length > 0) { %>
+                <% productDetails.forEach(product => {%>
+                    <tr>
+                        <td>
+                            <%= product.name %>
+                        </td>
+                        <td>
+                            <%= product.category %>
+                        </td>
+                        <td>
+                            <%= product.quantity %>
+                        </td>
+                        <td>
+                            <%= product.price %>
+                        </td>
+                        <td>
+                            <%= product.total %>
+                        </td>
+                    </tr>
+                    <%});%>
+                <%}%>
+        </table>
+        <h3>Total: <%= totalAmount %>
+        </h3>
+        <h3>Gracias por la compra!</h3>
+    </body>
+
+</html>
